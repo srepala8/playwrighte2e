@@ -1,0 +1,14 @@
+{
+  "name": "playwrighte2e",
+  "version": "1.0.0",
+  "description": "web and api test automation",
+  "license": "ISC",
+  "author": "Srini Repala",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {},
+  "devDependencies": {
+    "@playwright/test": "^1.59.1",
+    "@types/node": "^25.6.0"
+  }
+}
