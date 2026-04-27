@@ -1,6 +1,6 @@
 import{test,expect}  from '@playwright/test'
 
-test.only('should go to home page and check title and header', async({page})=>{
+test('should go to home page and check title and header', async({page})=>{
 
     //go to home page
     await page.goto("https://katalon-demo-cura.herokuapp.com/")
