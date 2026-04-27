@@ -6,7 +6,9 @@
   "author": "Srini Repala",
   "type": "commonjs",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "demo":"npx playwright test --headed"
+  },
   "devDependencies": {
     "@playwright/test": "^1.59.1",
     "@types/node": "^25.6.0"

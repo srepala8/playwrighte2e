@@ -30,6 +30,8 @@ export default defineConfig({
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
+    ignoreHTTPSErrors: true,
+    navigationTimeout: 30_000,
   },
 
   /* Configure projects for major browsers */
@@ -48,7 +50,10 @@ export default defineConfig({
     //   name: 'webkit',
     //   use: { ...devices['Desktop Safari'] },
     // },
-
+// {
+//     name: 'edge',
+//     use: { channel: 'msedge' },
+//   },
     /* Test against mobile viewports. */
     // {
     //   name: 'Mobile Chrome',
