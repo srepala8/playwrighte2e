@@ -22,8 +22,21 @@ export default defineConfig({
   /* Opt out of parallel tests on CI. */
   workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter:[ ['html'],
-  ['allure-playwright']
+  reporter:[ ['html',{
+    open: "never"
+  }],
+  ['allure-playwright',
+    {
+      detail:true,
+      SuiteTitle: true,
+      environmentInfo:{
+        name: 'TEST',
+        appName:'CURA',
+        Release:'Release 1.0.1',
+        node_version: process.version,
+      },
+    },
+  ],
   ],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
