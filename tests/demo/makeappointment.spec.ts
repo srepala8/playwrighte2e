@@ -1,6 +1,6 @@
 import {test,expect} from '@playwright/test'
 
-test.only("should test the make appointment flow",async({page})=>{
+test("should test the make appointment flow",async({page})=>{
 
     await page.goto("https://katalon-demo-cura.herokuapp.com/")
 
@@ -22,3 +22,8 @@ test.only("should test the make appointment flow",async({page})=>{
   await expect(page.locator("//h2")).toHaveText('Appointment Confirmation')
   await expect(page.locator('//a[contains(text(),"Go to Homepage")]')).toHaveText('Go to Homepage')
 });
+
+
+// test("should make appointment with non default values",{annotation : {type: "Bug",description:"Defect 123--On make my appointment"},tag:"@smoke"},async({page,browserName})=>{
+
+// })

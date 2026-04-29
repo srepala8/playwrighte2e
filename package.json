@@ -7,7 +7,9 @@
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "demo": "npx playwright test --headed"
+    "demo": "npx playwright test --headed",
+    "demo-tag": "npx playwright test --grep @smoke --headed",
+    "functional":"npx playwright test --headed"
   },
   "devDependencies": {
     "@playwright/test": "^1.59.1",
